@@ -1,12 +1,16 @@
 #include<iostream>
 using namespace std;
 /*
+	----------------------------------
+	https://projecteuler.net/problem=1
+	----------------------------------
+	--------------------------------------------------------------------
 	Problem #1.
 	Statement:
 	If we list all the natural numbers below 10 that are multiples of 
 	3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23. 
 	Find the sum of all the multiples of 3 or 5 below 1000.
-	
+	--------------------------------------------------------------------
 	Solution:
 	
 	As we know: 1 + 2 + 3 + ... + n = n(n+1)/2		.....1
@@ -32,6 +36,7 @@ using namespace std;
 	C	=	15[n(n+1)/2]	put n = 66  as 15 * 66 = 990 < 1000.
 	
 	Result = A + B - C
+	--------------------------------------------------------------------
 */
 int MathematicalApproach() {
 	return (
