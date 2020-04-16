@@ -3,9 +3,18 @@
 #include<iterator>
 using namespace std;
 /*
+	----------------------------------
+	https://projecteuler.net/problem=3
+	----------------------------------
+	---------------------------------------------------------------
+	Problem #3.
+	Statement:
 	The prime factors of 13195 are 5, 7, 13 and 29.
 	What is the largest prime factor of the number 600851475143 ?
+	---------------------------------------------------------------
+	Solution:
 */
+// Solution can be optimized further.
 int main() {
 	unsigned long long int inputNumber = 600851475143;
 	
@@ -23,10 +32,13 @@ int main() {
 			}
 		}
 		if (flag) {
-			primeFactors.push_back(i);
+			if (inputNumber % i != 0){
+				break;
+			}else{
+				primeFactors.push_back(i);
+			}
 		}
 	}
-	cout << "Prime numbers collected now searching for largest prime factor..." << endl;
 	unsigned long long int largestPrimeFactor;
 	for (it = primeFactors.begin(); it != primeFactors.end(); it++) {
 		if (inputNumber % *it == 0) {
@@ -34,11 +46,5 @@ int main() {
 		}
 	}
 	cout << largestPrimeFactor << endl;
-	
-	
-//	int i = 0;
-//	for (it = primeFactors.begin(); it != primeFactors.end(); it++) {
-//		cout << ++i << "==> "<< *it << endl;
-//	}
 	return 0;
 }
